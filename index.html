@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hîçzâde // 2026</title>
+
+        <meta
+            name="description"
+            content="Burada dünya yok… Yalnızca kelimelerin gölgesi ve göğün sonsuz sessizliği. Aradığın her şeyden vazgeçebildiysen, gir. Çünkü burası Hîçzâde’nin inziva durağı."
+        />
+        <meta
+            name="keywords"
+            content="hîçzâde, hiçlik, sükût, inziva, tefekkür"
+        />
+        <meta name="author" content="Hîçzâde" />
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:title" content="Hîçzâde // 2026" />
+        <meta
+            property="og:description"
+            content="Burada dünya yok… Yalnızca kelimelerin gölgesi ve göğün sonsuz sessizliği."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hiczadeh.com" />
+
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; style-src 'self' 'unsafe-inline';"
+        />
+        <meta name="referrer" content="no-referrer" />
+
+        <style>
+            :root {
+                --bg-color: #050505;
+                --text-primary: #d1d1d1;
+                --text-secondary: #777777;
+                --text-muted: #333333;
+                --font-mono: "Courier New", Courier, monospace;
+                --transition-smooth: 0.5s ease;
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-color: var(--bg-color);
+                color: var(--text-primary);
+                font-family: var(--font-mono);
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                cursor: default;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            main {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 2rem 1.5rem;
+                text-align: center;
+                user-select: none;
+                z-index: 1;
+            }
+
+            header h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+                letter-spacing: clamp(0.5rem, 2vw, 1rem);
+                font-weight: 200;
+                margin-bottom: 2rem;
+                text-transform: uppercase;
+                opacity: 0;
+                animation: fadeInText 3s forwards ease-out;
+                transition:
+                    letter-spacing var(--transition-smooth),
+                    text-shadow var(--transition-smooth);
+            }
+
+            header h1:hover {
+                letter-spacing: clamp(0.6rem, 2.5vw, 1.2rem);
+                text-shadow: 0 0 15px rgba(209, 209, 209, 0.3);
+            }
+
+            .subtitle {
+                font-size: 1rem;
+                letter-spacing: 0.05rem;
+                color: var(--text-secondary);
+                margin-bottom: 3.5rem;
+                line-height: 1.8;
+                font-style: italic;
+                opacity: 0;
+                animation: fadeInText 3s 1s forwards ease-out;
+            }
+
+            .loader-container {
+                width: 80px;
+                margin: 0 auto;
+                opacity: 0;
+                animation: fadeInText 2s 2s forwards;
+            }
+
+            .loader {
+                width: 100%;
+                height: 1px;
+                background-color: rgba(255, 255, 255, 0.05);
+                position: relative;
+            }
+
+            .loader::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-color: var(--text-primary);
+                box-shadow: 0 0 10px var(--text-primary);
+                opacity: 0.1;
+                animation: breathLight 4s infinite ease-in-out;
+            }
+
+            footer {
+                padding: 2rem 1rem;
+                text-align: center;
+                font-size: 0.75rem;
+                letter-spacing: 0.15rem;
+                color: var(--text-muted);
+                transition: color 0.3s ease;
+                z-index: 1;
+            }
+
+            footer:hover {
+                color: var(--text-secondary);
+            }
+
+            @keyframes fadeInText {
+                from {
+                    opacity: 0;
+                    filter: blur(4px);
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    filter: blur(0);
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes breathLight {
+                0%,
+                100% {
+                    opacity: 0.1;
+                    transform: scaleX(0.5);
+                }
+                50% {
+                    opacity: 0.8;
+                    transform: scaleX(1);
+                }
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                *,
+                *::before,
+                *::after {
+                    animation-duration: 0.01ms !important;
+                    animation-iteration-count: 1 !important;
+                    transition-duration: 0.01ms !important;
+                    scroll-behavior: auto !important;
+                }
+
+                header h1,
+                .subtitle,
+                .loader-container {
+                    opacity: 1;
+                    filter: none;
+                    transform: none;
+                }
+
+                .loader::after {
+                    opacity: 0.5;
+                    transform: scaleX(1);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>HÎÇZÂDE</h1>
+            </header>
+
+            <p class="subtitle">
+                oralarda, bi yerlerdeyim işte.. düşme ardıma!<br />
+                hasret duyar isen göğe bak, yüreğine bak öylece.
+            </p>
+
+            <div class="loader-container">
+                <div class="loader" aria-hidden="true"></div>
+            </div>
+        </main>
+
+        <footer>powered by hiczadeh.</footer>
+    </body>
+</html>
